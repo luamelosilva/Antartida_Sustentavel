@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <link rel="stylesheet" href="Pagina inicial.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Antártida Sustentável</title>
+    <link rel="shortcut icon" href="../src/favicon_io/favicon.ico" type="image/x-icon">
+  </head>
+  <body>
+
+
+    <!-- Seção de vídeo de fundo com título e menu -->
+    <header class="primeira-tela">
+
+      <video class="Video-fundo" autoplay loop muted playsinline>
+        <source src="../src/video/Tela-inicial.mp4" type="video/mp4" />
+      </video>
+
+      <div class="header">
+        <h1 id="Titulo">Antártida</h1>
+        <h2 id="Subtitulo">Por um futuro melhor</h2>
+      </div>
+
+      <nav>
+        <a href="Pagina inicial.html">
+          <img src="../src/img/Logo 2.png" alt="Home" class="botao-home" />
+        </a>
+
+        <!-- Menu dropdown -->
+         
+        <div class="dropdown">
+          
+          <button class="dropbtn">
+            <img src="../src/img/menu-hambuerguer.png" alt="Menu" class="menu-icon" />
+          </button>
+
+          <div class="dropdown-content">
+
+            <a href="../fontes/fontes.html"><img src="../src/img/Icone-arquivo2.png"alt="Artigos"class="icon"/>Fontes</a>
+            
+            <a href="../especies/especies.html"><img src="../src/img/botao-especie.png"alt="Espécies"class="icon"/>Espécies</a>
+
+            <a href="../linha_tempo/linha-tempo.html"><img src="../src/img/Icone-linha2.png"alt="Linha do Tempo"class="icon"/>Linha do tempo</a>
+
+            <a href="../causas/causas.html"><img src="../src/img/causas_icone.png"alt="Linha do Tempo"class="icon"/>Causas</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Segunda seção com chamada para ação -->
+    <main class="segunda-tela">
+
+      <section>
+        <h1 id="Titulo-segun">Ajude A Proteger O Continente Mais Extremo Do Planeta</h1>
+        <button onclick="window.location.href='../ajudar/ajudar.html'">AJUDAR</button>
+      </section>
+
+    </main>
+
+    <!-- Script para efeito de scroll -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const titulo = document.getElementById("Titulo");
+        const subtitulo = document.getElementById("Subtitulo");
+        const opacityValue = 1 - window.scrollY / window.innerHeight;
+
+        titulo.style.opacity = opacityValue;
+        subtitulo.style.opacity = opacityValue;
+      });
+
+      // Função para verificar se o elemento está visível no viewport
+      function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+          rect.top >= 0 &&
+          rect.left >= 0 &&
+          rect.bottom <=
+            (window.innerHeight || document.documentElement.clientHeight) &&
+          rect.right <=
+            (window.innerWidth || document.documentElement.clientWidth)
+        );
+      }
+    </script>
+  </body>
+</html>

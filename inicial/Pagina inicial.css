@@ -1,0 +1,291 @@
+/* Reset e correções básicas */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: 'Poppins';
+}
+
+#Titulo {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 200px;
+  position: absolute;
+  top: 170px;
+  left: 25%;
+}
+
+#Titulo:hover {
+  color: #ffffff;
+  text-shadow: 3px 3px 25px rgba(162, 184, 197, 0.6),
+    0 0 3px rgba(34, 136, 204, 0.7);
+}
+
+#Subtitulo {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  top: 470px;
+  left: 33%;
+  font-size: 60px;
+  padding: 5px;
+}
+
+#Subtitulo:hover {
+  color: #ffffff;
+  text-shadow: 3px 3px 25px rgba(162, 184, 197, 0.6),
+    0 0 3px rgba(34, 136, 204, 0.7);
+}
+
+#Titulo,
+#Subtitulo {
+  transition: opacity 0.5s ease;
+}
+
+.botao-home {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+  position: fixed;
+  top: 40px;
+  left: 20px;
+  z-index: 1002;
+}
+
+.botao-home:hover {
+  transform: scale(1.1);
+  box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+.botao-home:active {
+  transform: scale(0.95);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.primeira-tela {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Video-fundo {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+}
+
+
+
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+
+/* Links visitados */
+a:visited {
+  color: rgb(255, 255, 255);
+}
+
+
+/* Menu Dropdown */
+.dropdown {
+  position: fixed;
+  top: 70px; /* Posição para o topo */
+  right: 50px; /* Alinhar no canto superior direito */
+  z-index: 1000;
+}
+
+.dropbtn {
+  padding: 5px; /* Remove o padding extra */
+  background-color: transparent;
+  border: none; /* Remove bordas */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  width: 270px;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  z-index: 1000;
+  right: 0; /* Manter alinhado à direita */
+}
+
+.dropbtn:focus {
+  outline: none;
+}
+
+.dropdown-content a {
+  color: rgb(208, 206, 206);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: left;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(85, 127, 155, 0.7);
+  color: rgb(98, 131, 152);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block; /* Exibe o conteúdo ao passar o mouse */
+}
+
+.menu-icon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain; /* Mantém a proporção da imagem */
+  transition: transform 0.3s ease;
+  backface-visibility: hidden; /* Evita desfoque */
+}
+
+.dropbtn:hover .menu-icon {
+  transform: scale(1.1);
+}
+
+/* Segunda Tela */
+.segunda-tela {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  text-align: center;
+  margin-top: 0;
+  transition: background-image 1s ease-in-out;
+  background-attachment: local;
+  background-image: url("../src/img/pika.svg");
+}
+
+#Titulo-segun {
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 90px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+#Titulo-segun:hover {
+  color: rgb(255, 255, 255);
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Botão de ajuda */
+ section button {
+  background-color: rgba(255, 255, 255, 0.169);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 40px;
+  font-size: 48px;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+section button:hover {
+  background-color: rgbargba(85, 127, 155, 0.7);
+  color: rgb(34, 136, 204);
+  box-shadow: 20px 20px 15px rgba(0, 0, 0, 0.3);
+}
+
+section button:active {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Para telas menores que 768px (celulares) */
+@media screen and (max-width: 900px) {
+
+ #Titulo{
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 50px;
+    position: absolute;
+    top: 400px;
+    left: 20%;
+ }
+
+ #Subtitulo {
+    color: white;
+    font-weight: bold;
+    position: absolute;
+    top: 450px;
+    left: 10%;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.botao-home {
+  width: 90px;
+  height: 90px;
+  top: 60px;
+  left: 20px;
+}
+.dropbtn .menu-icon button{
+  top: 100px;
+}
+#Titulo-segun {
+  font-size: 40px;
+  
+}
+
+section button {
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+a{
+  font-size: 50px;
+}
+.dropdown-content a {
+  font-size: 20px;
+  padding: 8px;
+}
+.dropdown {
+  top: 5; /* Definido como 0 para que o botão fique completamente no topo */
+  right: 15px;
+  left: auto;
+}
+}
+
+/* Para telas menores que 480px (telas muito pequenas) */
+@media (max-width: 480px) { 
+
+  #Botao-ajuda {
+    position: absolute;
+    top: 1200px;
+    left: 50%;
+  }
+}
+
